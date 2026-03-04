@@ -348,7 +348,7 @@
                 class="absolute inset-0 z-[1] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.15)_0%,transparent_50%)]">
             </div>
 
-            <video id="hero-logo-video" muted playsinline preload="auto"
+            <video id="hero-logo-video" autoplay loop muted playsinline preload="auto"
                 class="w-full max-w-4xl h-auto object-contain transition-transform duration-[0.5s] ease-out brightness-110 contrast-125 drop-shadow-2xl relative z-[2]"
                 style="transform: scale(1.1) translateY(-5vh); mix-blend-mode: multiply;">
                 <source src="logo-animada.mp4" type="video/mp4">
@@ -534,11 +534,12 @@
             </div>
 
             <!-- "Pick the Place" Horizontal Container -->
-            <div class="flex gap-6 overflow-x-auto pb-12 pt-4 px-2 scrollbar-hide snap-x">
+            <div id="program-cards-container"
+                class="flex gap-6 overflow-x-auto pb-12 pt-4 px-2 scrollbar-hide snap-x snap-mandatory scroll-smooth w-full">
 
                 <!-- Card 1: Iniciantes -->
                 <div
-                    class="min-w-[340px] md:min-w-[400px] h-[500px] glass-panel rounded-3xl p-2 flex flex-col relative snap-center group shadow-xl hover:-translate-y-2 transition-transform duration-500">
+                    class="min-w-[85vw] md:min-w-[400px] h-[500px] glass-panel rounded-3xl p-2 flex flex-col relative snap-center snap-always group shadow-xl hover:-translate-y-2 transition-transform duration-500 shrink-0">
                     <div class="w-full h-3/5 rounded-2xl bg-black overflow-hidden relative border border-white/5">
                         <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
                         <!-- Placeholder Image. User will replace -->
@@ -585,7 +586,7 @@
 
                 <!-- Card 2: Competição -->
                 <div
-                    class="min-w-[340px] md:min-w-[400px] h-[500px] glass-panel rounded-3xl p-2 flex flex-col relative snap-center group shadow-xl hover:-translate-y-2 transition-transform duration-500">
+                    class="min-w-[85vw] md:min-w-[400px] h-[500px] glass-panel rounded-3xl p-2 flex flex-col relative snap-center snap-always group shadow-xl hover:-translate-y-2 transition-transform duration-500 shrink-0">
                     <div
                         class="w-full h-3/5 rounded-2xl bg-black overflow-hidden relative border border-white/5 filter grayscale group-hover:grayscale-0 transition-all duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
@@ -633,7 +634,7 @@
 
                 <!-- Card 3: GFTeam Kids -->
                 <div
-                    class="min-w-[340px] md:min-w-[400px] h-[500px] glass-panel rounded-3xl p-2 flex flex-col relative snap-center group shadow-xl hover:-translate-y-2 transition-transform duration-500">
+                    class="min-w-[85vw] md:min-w-[400px] h-[500px] glass-panel rounded-3xl p-2 flex flex-col relative snap-center snap-always group shadow-xl hover:-translate-y-2 transition-transform duration-500 shrink-0">
                     <div class="w-full h-3/5 rounded-2xl bg-black overflow-hidden relative border border-white/5">
                         <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
                         <!-- Placeholder Image -->
@@ -680,10 +681,10 @@
             </div>
 
             <!-- Horizontal scroll indication dots -->
-            <div class="flex justify-center gap-2 mt-4 md:hidden">
-                <div class="w-2 h-2 rounded-full bg-white"></div>
-                <div class="w-2 h-2 rounded-full bg-white/20"></div>
-                <div class="w-2 h-2 rounded-full bg-white/20"></div>
+            <div class="flex justify-center gap-2 mt-4 md:hidden" id="program-scroll-indicators">
+                <div class="w-2 h-2 rounded-full bg-white transition-opacity duration-300"></div>
+                <div class="w-2 h-2 rounded-full bg-white/20 transition-opacity duration-300"></div>
+                <div class="w-2 h-2 rounded-full bg-white/20 transition-opacity duration-300"></div>
             </div>
 
         </div>
@@ -969,7 +970,7 @@
                             Roxa ou Marrom</button>
                         <button onclick="navigateFilter(2, 'Faixa Preta')"
                             class="w-full text-center p-4 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">Faixa
-                            Preta (Osss!)</button>
+                            Preta</button>
                     </div>
                 </div>
 
@@ -1638,6 +1639,30 @@
     setTimeout(() => {
         canvas.classList.remove('opacity-0');
     }, 300);
+
+    // Sync Horizontal Scroll Dots
+    const programContainer = document.getElementById('program-cards-container');
+    const programDots = document.getElementById('program-scroll-indicators');
+    if (programContainer && programDots) {
+        programContainer.addEventListener('scroll', () => {
+            const scrollWidth = programContainer.scrollWidth - programContainer.clientWidth;
+            const scrollPos = programContainer.scrollLeft;
+            const percentage = scrollPos / scrollWidth;
+
+            const dots = programDots.children;
+            const activeIndex = Math.min(Math.round(percentage * (dots.length - 1)), dots.length - 1);
+
+            for (let i = 0; i < dots.length; i++) {
+                if (i === activeIndex) {
+                    dots[i].classList.remove('bg-white/20');
+                    dots[i].classList.add('bg-white');
+                } else {
+                    dots[i].classList.remove('bg-white');
+                    dots[i].classList.add('bg-white/20');
+                }
+            }
+        });
+    }
 </script>
 
 </html>
