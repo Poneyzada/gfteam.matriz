@@ -572,7 +572,7 @@
                                 </svg>
                                 Seg, Qua, Sex
                             </div>
-                            <button onclick="openModal()"
+                            <button onclick="openModalPath('Iniciante')"
                                 class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center hover:bg-gft-gold transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -620,7 +620,7 @@
                                 </svg>
                                 Seg a Sáb
                             </div>
-                            <button onclick="openModal()"
+                            <button onclick="openModalPath('Competição')"
                                 class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center hover:bg-gft-gold transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -666,7 +666,7 @@
                                 </svg>
                                 Ter e Qui
                             </div>
-                            <button onclick="openModal()"
+                            <button onclick="openModalPath('Infantil')"
                                 class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center hover:bg-gft-gold transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -949,21 +949,59 @@
                     </div>
                 </div>
 
-                <!-- ETAPA 2 (Experiência) -->
-                <div id="filter-step-2"
+                <!-- ETAPA 2 (Experiência) - DINÂMICA POR CAMINHO -->
+
+                <!-- Caminho: Iniciante -->
+                <div id="filter-step-2-iniciante"
                     class="space-y-6 hidden transition-all duration-300 absolute inset-x-8 top-8 flex flex-col items-center text-center">
-                    <label class="block text-xs font-sans font-medium text-white/70">2. Módulo de Graduação
-                        Atual:</label>
+                    <label class="block text-xs font-sans font-medium text-white/70">2. Qual a sua maior motivação
+                        hoje?</label>
                     <div class="grid grid-cols-1 gap-3 w-full">
-                        <button onclick="navigateFilter(2, 'Branca')"
+                        <button onclick="navigateFilter(2, 'Defesa Pessoal e Confiança')"
+                            class="w-full text-center p-5 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">Defesa
+                            Pessoal e Confiança</button>
+                        <button onclick="navigateFilter(2, 'Emagrecimento e Saúde')"
+                            class="w-full text-center p-5 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">Emagrecimento
+                            e Saúde</button>
+                        <button onclick="navigateFilter(2, 'Disciplina e Mente Forte')"
+                            class="w-full text-center p-5 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">Disciplina
+                            e Mente Forte</button>
+                    </div>
+                </div>
+
+                <!-- Caminho: Competição -->
+                <div id="filter-step-2-competicao"
+                    class="space-y-6 hidden transition-all duration-300 absolute inset-x-8 top-8 flex flex-col items-center text-center">
+                    <label class="block text-xs font-sans font-medium text-white/70">2. Qual a sua graduação
+                        atual?</label>
+                    <div class="grid grid-cols-1 gap-3 w-full">
+                        <button onclick="navigateFilter(2, 'Faixa Branca ou Azul')"
                             class="w-full text-center p-5 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">Faixa
-                            Branca (Ou Nenhuma Experiência)</button>
-                        <button onclick="navigateFilter(2, 'Colorida')"
+                            Branca ou Azul</button>
+                        <button onclick="navigateFilter(2, 'Faixa Roxa ou Marrom')"
                             class="w-full text-center p-5 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">Faixa
-                            Colorida (Azul, Roxa ou Marrom)</button>
-                        <button onclick="navigateFilter(2, 'Preta')"
+                            Roxa ou Marrom</button>
+                        <button onclick="navigateFilter(2, 'Faixa Preta ou Mestre')"
                             class="w-full text-center p-5 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">Faixa
                             Preta ou Mestre</button>
+                    </div>
+                </div>
+
+                <!-- Caminho: Infantil -->
+                <div id="filter-step-2-kids"
+                    class="space-y-6 hidden transition-all duration-300 absolute inset-x-8 top-8 flex flex-col items-center text-center">
+                    <label class="block text-xs font-sans font-medium text-white/70">2. Qual a idade da criança ou
+                        adolescente?</label>
+                    <div class="grid grid-cols-1 gap-3 w-full">
+                        <button onclick="navigateFilter(2, '4 a 7 anos (Baby/Mirim)')"
+                            class="w-full text-center p-5 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">4
+                            a 7 anos (Baby/Mirim)</button>
+                        <button onclick="navigateFilter(2, '8 a 11 anos (Infantil)')"
+                            class="w-full text-center p-5 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">8
+                            a 11 anos (Infantil)</button>
+                        <button onclick="navigateFilter(2, '12 a 15 anos (Infanto-Juvenil)')"
+                            class="w-full text-center p-5 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">12
+                            a 15 anos (Infanto-Juvenil)</button>
                     </div>
                 </div>
 
@@ -1225,12 +1263,30 @@
             setTimeout(() => modal.classList.add('modal-active'), 10);
 
             // Reset state
-            ['filter-step-1', 'filter-step-2', 'filter-step-3', 'filter-step-final'].forEach(id => {
+            ['filter-step-1', 'filter-step-2-iniciante', 'filter-step-2-competicao', 'filter-step-2-kids', 'filter-step-3', 'filter-step-final'].forEach(id => {
                 document.getElementById(id).classList.add('hidden');
             });
             document.getElementById('filter-step-1').classList.remove('hidden');
+
             document.getElementById('leadName').value = '';
             leadData = { foco: '', experiencia: '', nome: '' };
+        }
+
+        function openModalPath(path) {
+            toggleModalScrollMode(true);
+            modal.classList.remove('hidden');
+            setTimeout(() => modal.classList.add('modal-active'), 10);
+
+            // Reset state
+            ['filter-step-1', 'filter-step-2-iniciante', 'filter-step-2-competicao', 'filter-step-2-kids', 'filter-step-3', 'filter-step-final'].forEach(id => {
+                document.getElementById(id).classList.add('hidden');
+            });
+
+            document.getElementById('leadName').value = '';
+            leadData = { foco: '', experiencia: '', nome: '' };
+
+            // Direct navigation
+            navigateFilter(1, path);
         }
 
         function closeModal() {
@@ -1240,14 +1296,23 @@
         }
 
         function navigateFilter(currentStep, value) {
-            // Apply slight fade transition delays by toggling classes
             if (currentStep === 1) {
                 leadData.foco = value;
                 document.getElementById('filter-step-1').classList.add('hidden');
-                document.getElementById('filter-step-2').classList.remove('hidden');
+
+                if (value === 'Iniciante') {
+                    document.getElementById('filter-step-2-iniciante').classList.remove('hidden');
+                } else if (value === 'Competição') {
+                    document.getElementById('filter-step-2-competicao').classList.remove('hidden');
+                } else if (value === 'Infantil') {
+                    document.getElementById('filter-step-2-kids').classList.remove('hidden');
+                }
             } else if (currentStep === 2) {
                 leadData.experiencia = value;
-                document.getElementById('filter-step-2').classList.add('hidden');
+                // Hide whichever step 2 is currently shown
+                ['filter-step-2-iniciante', 'filter-step-2-competicao', 'filter-step-2-kids'].forEach(id => {
+                    document.getElementById(id).classList.add('hidden');
+                });
                 document.getElementById('filter-step-3').classList.remove('hidden');
             }
         }
@@ -1260,7 +1325,7 @@
             document.getElementById('filter-step-final').classList.remove('hidden');
 
             const wppBaseUrl = "https://wa.me/5521999999999";
-            const message = `Olá! Meu nome é ${leadData.nome} e gostaria de agendar uma visita na Matriz.\n\nFoco Profissional/Pessoal: ${leadData.foco}.\nMódulo de Origem (Nível): ${leadData.experiencia}\n\nConheci o site de vocês hoje e quero treinar na GFTeam!`;
+            const message = `Olá! Meu nome é ${leadData.nome} e gostaria de agendar uma visita na Matriz.\n\nFoco/Turma: ${leadData.foco}.\nDetalhe/Nível: ${leadData.experiencia}\n\nConheci o site de vocês hoje e quero treinar na GFTeam!`;
             document.getElementById("filter-wpp-btn").href = `${wppBaseUrl}?text=${encodeURIComponent(message)}`;
         }
 
