@@ -856,186 +856,48 @@
     <!-- MEGA FOOTER (Premium Minimal) -->
     <footer id="location" class="bg-black py-20 px-6 border-t border-white/5 relative z-40">
         <div class="max-w-7xl mx-auto flex flex-col items-center text-center gap-10">
-            <!-- FOOTER LAYOUT: Ecosystem (Left) & Location (Right) -->
-            <div
-                class="w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 bg-[#02040a] rounded-3xl p-8 md:p-12 border border-white/5 shadow-2xl mt-12">
+            <img src="logo-matriz.png" alt="Logo Detalhe" class="h-12 opacity-80 mb-2 drop-shadow-lg">
 
-                <!-- Left Side: Ecosystem Bento Grid -->
-                <div class="lg:col-span-8 flex flex-col gap-6 w-full">
-                    <div class="mb-4">
-                        <span class="text-gft-gold text-[10px] font-bold uppercase tracking-[0.3em] block mb-2">GFTeam e
-                            Você</span>
-                        <h4 class="font-sans font-medium text-2xl text-white tracking-tight">Nosso Ecossistema</h4>
-                    </div>
+            <div class="space-y-4 flex flex-col items-center">
+                <h4 class="title-display text-2xl md:text-3xl text-white mb-2">A MATRIZ DA EQUIPE MUNDIAL</h4>
 
-                    <!-- Store (Top Large Hero) -->
-                    <a href="#" target="_blank"
-                        class="group relative h-[300px] md:h-[350px] w-full glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-gft-gold/40 transition-all duration-500 shadow-xl flex flex-col justify-end p-8">
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-[#02040a] via-[#02040a]/80 to-transparent z-10">
-                        </div>
-                        <div class="absolute inset-0 bg-[#0d1326] z-[-1] flex items-center justify-center">
-                            <span class="text-white/10 uppercase text-2xl font-bold tracking-widest">FOTO: LOJA GFTEAM
-                                STORE</span>
-                        </div>
-
-                        <div class="relative z-20">
+                <!-- 21st.dev Location Tag (Translated to Vanilla JS/CSS) -->
+                <div class="location-tag-container group" onclick="openModal()">
+                    <!-- Live pulse indicator -->
+                    <div class="relative flex items-center justify-center">
+                        <span class="relative flex h-2 w-2">
                             <span
-                                class="text-gft-gold text-[10px] font-bold uppercase tracking-widest mb-2 block">Equipamentos
-                                Oficiais</span>
-                            <h3
-                                class="title-display text-3xl md:text-5xl text-white mb-2 group-hover:text-gft-gold transition-colors">
-                                GFTeam Store</h3>
-                            <p class="font-sans text-white/50 text-sm md:text-base max-w-lg mb-6">A armadura oficial da
-                                nossa equipe. Kimonos, rashguards de competição e a nossa linha de vestuário casual
-                                exclusiva para você carregar nosso escudo no peito onde for.</p>
-                            <div
-                                class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white group-hover:text-gft-gold transition-colors">
-                                Visitar E-commerce Oficial
-                                <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Bottom Split: Course & Podcast -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-                        <!-- Course / GFTeam Max -->
-                        <a href="#" target="_blank"
-                            class="group relative min-h-[300px] glass-panel rounded-3xl overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-500 p-8 flex flex-col justify-end">
-                            <div
-                                class="absolute inset-0 bg-blue-900/20 mix-blend-multiply group-hover:bg-blue-900/40 transition-colors duration-500 z-0">
-                            </div>
-                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent z-10">
-                            </div>
-                            <!-- GFTeam Cast (Podcast Carousel) -->
-                            <div
-                                class="group relative min-h-[300px] glass-panel rounded-3xl overflow-hidden border border-white/10 p-6 flex flex-col justify-between">
-                                <!-- Background elements -->
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-br from-red-900/10 to-transparent mix-blend-screen pointer-events-none">
-                                </div>
-
-                                <!-- Header -->
-                                <div
-                                    class="relative z-20 flex justify-between items-start mb-6 border-b border-white/5 pb-4">
-                                    <div>
-                                        <span
-                                            class="text-gft-gold text-[10px] font-bold uppercase tracking-widest mb-1 block">YouTube
-                                            & Spotify</span>
-                                        <h3 class="title-display text-2xl text-white">GFTeam Cast</h3>
-                                    </div>
-                                    <div
-                                        class="bg-red-600/80 border border-red-400/30 text-white text-[9px] font-bold uppercase tracking-widest px-2 py-1 rounded-full flex items-center gap-1">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> No Ar
-                                    </div>
-                                </div>
-
-                                <!-- Carousel Item (Episode 1) -->
-                                <div class="relative z-20 flex-1 flex flex-col justify-end transition-opacity duration-500"
-                                    id="cast-item-1">
-                                    <div class="flex gap-4 items-center mb-4">
-                                        <!-- Avatar / Thumbnail -->
-                                        <div
-                                            class="w-16 h-16 rounded-2xl overflow-hidden border border-white/10 shrink-0 relative group-hover:scale-105 transition-transform duration-500">
-                                            <div
-                                                class="absolute inset-0 bg-black/40 z-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                                <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                                                    <path d="M8 5v14l11-7z" />
-                                                </svg>
-                                            </div>
-                                            <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=200&auto=format&fit=crop"
-                                                alt="Podcast Episode"
-                                                class="w-full h-full object-cover filter grayscale" />
-                                        </div>
-                                        <div>
-                                            <h4 class="text-white font-bold text-sm">Resenha de Campeão</h4>
-                                            <p class="text-white/50 text-xs mt-0.5">Mestre Julio Cesar</p>
-                                        </div>
-                                    </div>
-                                    <p class="font-sans text-white/60 text-xs italic mb-4 line-clamp-2">"O Jiu-Jitsu não
-                                        é só medalha, é sobre quem você se torna no processo de buscá-la..."</p>
-
-                                    <div class="flex justify-between items-center mt-auto">
-                                        <div
-                                            class="text-white/70 text-[10px] uppercase font-bold tracking-widest flex items-center gap-1 hover:text-white transition-colors cursor-pointer">
-                                            Assistir Completo <svg class="w-3 h-3" fill="none" stroke="currentColor"
-                                                viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                                            </svg>
-                                        </div>
-                                        <!-- Simple Nav Dots -->
-                                        <div class="flex gap-1.5">
-                                            <div class="w-2 h-2 rounded-full bg-white transition-all cursor-pointer">
-                                            </div>
-                                            <div
-                                                class="w-2 h-2 rounded-full bg-white/20 hover:bg-white/50 transition-all cursor-pointer">
-                                            </div>
-                                            <div
-                                                class="w-2 h-2 rounded-full bg-white/20 hover:bg-white/50 transition-all cursor-pointer">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Side: Location Widget -->
-            <div
-                class="lg:col-span-4 flex flex-col items-center justify-center text-center p-8 bg-black/40 rounded-2xl border border-white/5 h-full">
-                <img src="logo-matriz.png" alt="Logo Detalhe" class="h-12 opacity-80 mb-8 drop-shadow-lg">
-
-                <div class="space-y-4 flex flex-col items-center w-full">
-                    <h4 class="title-display text-xl md:text-2xl text-white mb-2">A MATRIZ MUNDIAL</h4>
-
-                    <!-- 21st.dev Location Tag (Translated to Vanilla JS/CSS) -->
-                    <div class="location-tag-container group w-full" onclick="openModal()">
-                        <!-- Live pulse indicator -->
-                        <div class="relative flex items-center justify-center">
-                            <span class="relative flex h-2 w-2">
-                                <span
-                                    class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75"></span>
-                                <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
-                            </span>
-                        </div>
-
-                        <!-- Texts: City -> Time -->
-                        <div class="loc-text-wrapper font-sans w-full text-center">
-                            <span class="loc-city block w-full text-center truncate">Méier, Rio de Janeiro</span>
-                            <span class="loc-time" id="live-time-display">--:-- BRT</span>
-                        </div>
-
-                        <!-- Arrow Icon -->
-                        <svg class="loc-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M7 17L17 7"></path>
-                            <path d="M7 7h10v10"></path>
-                        </svg>
+                                class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-75"></span>
+                            <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+                        </span>
                     </div>
 
-                    <p class="font-sans text-xs text-white/40 mt-6 leading-relaxed">
-                        Rua Dias da Cruz, 478 - Méier.<br>
-                        Venha fazer parte do nosso legado.
-                    </p>
+                    <!-- Texts: City -> Time -->
+                    <div class="loc-text-wrapper font-sans">
+                        <span class="loc-city">Méier, Rio de Janeiro</span>
+                        <span class="loc-time" id="live-time-display">--:-- BRT</span>
+                    </div>
+
+                    <!-- Arrow Icon (Lucide Arrow-Up-Right) -->
+                    <svg class="loc-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 17L17 7"></path>
+                        <path d="M7 7h10v10"></path>
+                    </svg>
                 </div>
 
-                <div class="mt-8 w-full">
-                    <button onclick="openModal()"
-                        class="btn-solid w-full py-5 rounded-xl font-bold uppercase tracking-widest text-[10px] shadow-[0_10px_30px_rgba(251,191,36,0.1)]">
-                        Agendar Visita Oficial
-                    </button>
-                </div>
+                <p class="font-sans text-sm text-white/40 max-w-sm mt-6">
+                    Rua Dias da Cruz, X - Méier.<br>
+                    Venha fazer parte do nosso legado.
+                </p>
             </div>
 
-        </div>
-
+            <div class="mt-4">
+                <button onclick="openModal()"
+                    class="btn-solid px-12 py-5 rounded-xl font-bold uppercase tracking-widest text-sm shadow-[0_10px_30px_rgba(251,191,36,0.1)]">
+                    Agendar Visita Oficial
+                </button>
+            </div>
         </div>
         <div
             class="max-w-7xl mx-auto border-t border-white/5 mt-20 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-white/30 uppercase tracking-[0.2em] font-bold">
