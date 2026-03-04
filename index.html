@@ -572,7 +572,7 @@
                                 </svg>
                                 Seg, Qua, Sex
                             </div>
-                            <button onclick="openModalPath('Iniciante')"
+                            <button onclick="openModalPath('Turmas Regulares (Adultos)')"
                                 class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center hover:bg-gft-gold transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -620,7 +620,7 @@
                                 </svg>
                                 Seg a Sáb
                             </div>
-                            <button onclick="openModalPath('Competição')"
+                            <button onclick="openModalPath('Equipe de Competição')"
                                 class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center hover:bg-gft-gold transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -666,7 +666,7 @@
                                 </svg>
                                 Ter e Qui
                             </div>
-                            <button onclick="openModalPath('Infantil')"
+                            <button onclick="openModalPath('GFTeam Kids (Infantil)')"
                                 class="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center hover:bg-gft-gold transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -931,41 +931,44 @@
                 <!-- ETAPA 1 -->
                 <div id="filter-step-1"
                     class="space-y-6 transition-all duration-300 absolute inset-x-8 top-8 flex flex-col items-center text-center">
-                    <label class="block text-xs font-sans font-medium text-white/70">1. Qual o foco principal do seu
-                        treino?</label>
+                    <label class="block text-xs font-sans font-medium text-white/70">1. Qual o perfil de turma ideal
+                        para você?</label>
                     <div class="grid grid-cols-1 gap-3 w-full">
-                        <button onclick="navigateFilter(1, 'Iniciante')"
+                        <button onclick="navigateFilter(1, 'Turmas Regulares (Adultos)')"
                             class="w-full text-center p-5 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">
-                            Quero começar do zero (Iniciante)
+                            Turmas Regulares (Iniciante a Avançado)
                         </button>
-                        <button onclick="navigateFilter(1, 'Competição')"
+                        <button onclick="navigateFilter(1, 'Equipe de Competição')"
                             class="w-full text-center p-5 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">
-                            Já treino e busco Alto Rendimento
+                            Equipe de Competição (Alto Rendimento)
                         </button>
-                        <button onclick="navigateFilter(1, 'Infantil')"
+                        <button onclick="navigateFilter(1, 'GFTeam Kids (Infantil)')"
                             class="w-full text-center p-5 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">
-                            Para o meu filho(a) (Kids)
+                            Aulas para Crianças / Adolescentes
                         </button>
                     </div>
                 </div>
 
                 <!-- ETAPA 2 (Experiência) - DINÂMICA POR CAMINHO -->
 
-                <!-- Caminho: Iniciante -->
-                <div id="filter-step-2-iniciante"
+                <!-- Caminho: Turmas Regulares (Adulto) -->
+                <div id="filter-step-2-regular"
                     class="space-y-6 hidden transition-all duration-300 absolute inset-x-8 top-8 flex flex-col items-center text-center">
-                    <label class="block text-xs font-sans font-medium text-white/70">2. Qual a sua maior motivação
-                        hoje?</label>
+                    <label class="block text-xs font-sans font-medium text-white/70">2. Qual a sua graduação
+                        atual?</label>
                     <div class="grid grid-cols-1 gap-3 w-full">
-                        <button onclick="navigateFilter(2, 'Defesa Pessoal e Confiança')"
-                            class="w-full text-center p-5 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">Defesa
-                            Pessoal e Confiança</button>
-                        <button onclick="navigateFilter(2, 'Emagrecimento e Saúde')"
-                            class="w-full text-center p-5 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">Emagrecimento
-                            e Saúde</button>
-                        <button onclick="navigateFilter(2, 'Disciplina e Mente Forte')"
-                            class="w-full text-center p-5 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">Disciplina
-                            e Mente Forte</button>
+                        <button onclick="navigateFilter(2, 'Faixa Branca (Iniciante)')"
+                            class="w-full text-center p-4 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">Faixa
+                            Branca (Começando agora)</button>
+                        <button onclick="navigateFilter(2, 'Faixa Azul')"
+                            class="w-full text-center p-4 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">Faixa
+                            Azul</button>
+                        <button onclick="navigateFilter(2, 'Faixa Roxa ou Marrom')"
+                            class="w-full text-center p-4 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">Faixa
+                            Roxa ou Marrom</button>
+                        <button onclick="navigateFilter(2, 'Faixa Preta')"
+                            class="w-full text-center p-4 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">Faixa
+                            Preta (Osss!)</button>
                     </div>
                 </div>
 
@@ -975,15 +978,15 @@
                     <label class="block text-xs font-sans font-medium text-white/70">2. Qual a sua graduação
                         atual?</label>
                     <div class="grid grid-cols-1 gap-3 w-full">
-                        <button onclick="navigateFilter(2, 'Faixa Branca ou Azul')"
-                            class="w-full text-center p-5 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">Faixa
+                        <button onclick="navigateFilter(2, 'Faixa Branca/Azul')"
+                            class="w-full text-center p-4 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">Faixa
                             Branca ou Azul</button>
-                        <button onclick="navigateFilter(2, 'Faixa Roxa ou Marrom')"
-                            class="w-full text-center p-5 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">Faixa
+                        <button onclick="navigateFilter(2, 'Faixa Roxa/Marrom')"
+                            class="w-full text-center p-4 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">Faixa
                             Roxa ou Marrom</button>
-                        <button onclick="navigateFilter(2, 'Faixa Preta ou Mestre')"
-                            class="w-full text-center p-5 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">Faixa
-                            Preta ou Mestre</button>
+                        <button onclick="navigateFilter(2, 'Faixa Preta')"
+                            class="w-full text-center p-4 bg-black/50 hover:bg-white/10 border border-white/5 hover:border-gft-gold/50 transition-all rounded-xl text-sm font-medium text-white group cursor-pointer">Faixa
+                            Preta</button>
                     </div>
                 </div>
 
@@ -1263,7 +1266,7 @@
             setTimeout(() => modal.classList.add('modal-active'), 10);
 
             // Reset state
-            ['filter-step-1', 'filter-step-2-iniciante', 'filter-step-2-competicao', 'filter-step-2-kids', 'filter-step-3', 'filter-step-final'].forEach(id => {
+            ['filter-step-1', 'filter-step-2-regular', 'filter-step-2-competicao', 'filter-step-2-kids', 'filter-step-3', 'filter-step-final'].forEach(id => {
                 document.getElementById(id).classList.add('hidden');
             });
             document.getElementById('filter-step-1').classList.remove('hidden');
@@ -1278,7 +1281,7 @@
             setTimeout(() => modal.classList.add('modal-active'), 10);
 
             // Reset state
-            ['filter-step-1', 'filter-step-2-iniciante', 'filter-step-2-competicao', 'filter-step-2-kids', 'filter-step-3', 'filter-step-final'].forEach(id => {
+            ['filter-step-1', 'filter-step-2-regular', 'filter-step-2-competicao', 'filter-step-2-kids', 'filter-step-3', 'filter-step-final'].forEach(id => {
                 document.getElementById(id).classList.add('hidden');
             });
 
@@ -1300,17 +1303,17 @@
                 leadData.foco = value;
                 document.getElementById('filter-step-1').classList.add('hidden');
 
-                if (value === 'Iniciante') {
-                    document.getElementById('filter-step-2-iniciante').classList.remove('hidden');
-                } else if (value === 'Competição') {
+                if (value === 'Turmas Regulares (Adultos)') {
+                    document.getElementById('filter-step-2-regular').classList.remove('hidden');
+                } else if (value === 'Equipe de Competição') {
                     document.getElementById('filter-step-2-competicao').classList.remove('hidden');
-                } else if (value === 'Infantil') {
+                } else if (value === 'GFTeam Kids (Infantil)') {
                     document.getElementById('filter-step-2-kids').classList.remove('hidden');
                 }
             } else if (currentStep === 2) {
                 leadData.experiencia = value;
                 // Hide whichever step 2 is currently shown
-                ['filter-step-2-iniciante', 'filter-step-2-competicao', 'filter-step-2-kids'].forEach(id => {
+                ['filter-step-2-regular', 'filter-step-2-competicao', 'filter-step-2-kids'].forEach(id => {
                     document.getElementById(id).classList.add('hidden');
                 });
                 document.getElementById('filter-step-3').classList.remove('hidden');
